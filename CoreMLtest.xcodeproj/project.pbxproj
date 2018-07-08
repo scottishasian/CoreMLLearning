@@ -12,6 +12,8 @@
 		24BD640D20F24B9D0082DD91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BD640B20F24B9D0082DD91 /* Main.storyboard */; };
 		24BD640F20F24BA00082DD91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24BD640E20F24BA00082DD91 /* Assets.xcassets */; };
 		24BD641220F24BA00082DD91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BD641020F24BA00082DD91 /* LaunchScreen.storyboard */; };
+		24BD641A20F258120082DD91 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 24BD641920F258120082DD91 /* SqueezeNet.mlmodel */; };
+		24BD641C20F25C350082DD91 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 24BD641B20F25C350082DD91 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		24BD640E20F24BA00082DD91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24BD641120F24BA00082DD91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24BD641320F24BA00082DD91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24BD641920F258120082DD91 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		24BD641B20F25C350082DD91 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				24BD640B20F24B9D0082DD91 /* Main.storyboard */,
 				24BD640E20F24BA00082DD91 /* Assets.xcassets */,
 				24BD641020F24BA00082DD91 /* LaunchScreen.storyboard */,
+				24BD641B20F25C350082DD91 /* Resnet50.mlmodel */,
+				24BD641920F258120082DD91 /* SqueezeNet.mlmodel */,
 				24BD641320F24BA00082DD91 /* Info.plist */,
 			);
 			path = CoreMLtest;
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BD640A20F24B9D0082DD91 /* ViewController.swift in Sources */,
+				24BD641A20F258120082DD91 /* SqueezeNet.mlmodel in Sources */,
+				24BD641C20F25C350082DD91 /* Resnet50.mlmodel in Sources */,
 				24BD640820F24B9D0082DD91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
