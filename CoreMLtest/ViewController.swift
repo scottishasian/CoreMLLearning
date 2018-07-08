@@ -63,6 +63,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         //Analyze camera data.
     
        // VNImageRequestHandler(cgImage: <#T##CGImage#>, options: [:]).perform(<#T##requests: [VNRequest]##[VNRequest]#>)
+        addSubView()
         
     }
     
