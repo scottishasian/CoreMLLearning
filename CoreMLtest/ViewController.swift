@@ -13,6 +13,17 @@ import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
+    @IBOutlet weak var observationLabel: UILabel!
+    
+    let identifierLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .white
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    //Need to create a label this way to display the text on the camera view
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,6 +91,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
             print(firstObservation.identifier, firstObservation.confidence)
             
+            //Label needs to be used on main thread.
+            
+            DispatchQueue.main.async {
+                self.identifierLabel.text = "\(firstObservation.identifier)" + ": " + "\(firstObservation.confidence)"
+            }
+            
         }
 
         
@@ -88,6 +105,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         //Execute request and tell us what the object is.
     }
 
+    func addSubView() {
+        view.addSubview(identifierLabel)
+        identifierLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32).isActive = true
+        identifierLabel.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        identifierLabel.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        identifierLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
